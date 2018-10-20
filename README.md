@@ -1,24 +1,15 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
 
-Things you may want to cover:
+<h1>Data Description</h1>
+Data for this project consists of a dogs, people, and houses. All of these are associated through a family object. A family must have one or more people, zero or more dogs, and 1 house (for simplicity).
 
-* Ruby version
+<h2>Person</h2>
+A person has a firstname, lastname, birthdate, and height. Must have one family
 
-* System dependencies
+<h2>Dog</h2>
+A dog has a name, breed, age, color, and image url. Must have one family.<br>
+Breed and image data is pulled from <a href="https://dog.ceo/dog-api/documentation/breed">https://dog.ceo/dog-api/documentation/breed</a>
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+<h2>House</h2>
+A house has an address, postal code, and description. Must have one family.
