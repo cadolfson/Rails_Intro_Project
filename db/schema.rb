@@ -25,6 +25,7 @@ ActiveRecord::Schema.define(version: 2018_10_22_150744) do
   end
 
   create_table "families", force: :cascade do |t|
+    t.integer "generation"
     t.integer "house_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
