@@ -3,11 +3,13 @@
 one:
   firstname: MyString
   lastname: MyString
-  birthdate: 2018-10-09
+  birthdate: 2018-10-22
   height: 1
+  family: one
 
 two:
   firstname: MyString
   lastname: MyString
-  birthdate: 2018-10-09
+  birthdate: 2018-10-22
   height: 1
+  family: two

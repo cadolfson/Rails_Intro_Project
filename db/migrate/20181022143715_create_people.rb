@@ -5,6 +5,7 @@ class CreatePeople < ActiveRecord::Migration[5.2]
       t.string :lastname
       t.date :birthdate
       t.integer :height
+      t.references :family, foreign_key: true
 
       t.timestamps
     end

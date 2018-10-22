@@ -5,7 +5,7 @@ class CreateHouses < ActiveRecord::Migration[5.2]
       t.string :postal_code
       t.string :city
       t.string :provence
-      t.test :description
+      t.text :description
 
       t.timestamps
     end
