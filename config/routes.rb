@@ -1,13 +1,11 @@
 Rails.application.routes.draw do
+  resources :families, only: [:index, :show]
+  resources :houses, only: [:index, :show]
+  resources :dogs, only: [:index, :show]
   
-  get 'pages/about', to: 'pages#about'
   get 'about', to: 'pages#about', as: 'about'
 
-  get 'dogs/index'
-  get 'dogs/show'
-  get 'houses/index'
-  get 'houses/show'
-  get 'families/index'
-  get 'families/show'
+  root to: 'pages#about'
+
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
