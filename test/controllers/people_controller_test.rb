@@ -1,13 +1,13 @@
 require 'test_helper'
 
-class FamiliesControllerTest < ActionDispatch::IntegrationTest
+class PeopleControllerTest < ActionDispatch::IntegrationTest
   test "should get index" do
-    get families_index_url
+    get people_index_url
     assert_response :success
   end
 
   test "should get show" do
-    get families_show_url
+    get people_show_url
     assert_response :success
   end
 
