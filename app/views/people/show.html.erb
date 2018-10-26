@@ -3,5 +3,14 @@
 <ul>
     <li>Age: <%= @person.age %></li>
     <li>Birthdate: <%= @person.birthdate %></li>
-    <li>Height: <%= @person.height %></li>
+    <li>Height: <%= @person.height %>cm</li>
+</ul>
+<h4>Family:</h4>
+<ul>
+    <% @person.family.people.each do | person | %>
+        <% next if person == @person %>
+        <%= link_to person_path(person) do %>
+            <li><%= person.fullname %></li>
+        <% end %>
+    <% end %>
 </ul>
