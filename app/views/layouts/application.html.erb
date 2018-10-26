@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Families and Dogs</title>
+    <title>People N' Pets</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -10,6 +10,14 @@
   </head>
 
   <body>
-    <%= yield %>
+    <div class="container">
+      <header>
+        <h1>People N' Pets</h1>
+        <%= link_to "People", people_path %>
+        <%= link_to "Pets", dogs_path %>
+        <%= link_to "About", about_path %>
+      </header>
+      <%= yield %>
+    </div>
   </body>
 </html>
