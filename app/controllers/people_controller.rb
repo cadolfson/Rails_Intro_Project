@@ -7,6 +7,4 @@ class PeopleController < ApplicationController
     @person = Person.find(params[:id])
   end
 
-  
-
 end
