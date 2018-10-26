@@ -2,9 +2,11 @@
 
 <ul class="list-group">
     <% @dogs.each do | dog | %>
-        <%= link_to dog_path(dog), class: "list-group-item" do %>
-            <img src="<%= dog.image_url %>" height="150" width="150" class="img-thumbnail rounded-circle float-left">
+        <li class="list-group-item">
+        <%= link_to dog_path(dog) do %>
+            <img src="<%= dog.image_url %>" alt="<%= dog.breed %>" height="150" width="150" class="img-thumbnail rounded-circle float-left">
             <p><%= dog.name %></p>
         <% end %>
+        </li>
     <% end %>
 </ul>   
