@@ -33,7 +33,7 @@ puts "Generating 50 families..."
             firstname: Faker::Name.first_name,
             lastname: last_name,
             birthdate: Faker::Date.birthday(18,99),
-            height: Faker::Demographic.height(:metric)
+            height: (Faker::Demographic.height.to_f * 100)
         )
         puts "\t" + person.firstname
     end

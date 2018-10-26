@@ -6,4 +6,10 @@ class Person < ApplicationRecord
   def fullname
     self.firstname + " " + self.lastname
   end
+
+  def age
+    age = Date.today.year - self.birthdate.year
+    age -= 1 if Date.today < self.birthdate + age.years
+    return age
+  end
 end
