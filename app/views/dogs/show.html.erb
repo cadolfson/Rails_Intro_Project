@@ -1,2 +1,15 @@
-<h2>Dogs#show</h2>
-<p>Find me in app/views/dogs/show.html.erb</p>
+<h2><%= @dog.name %></h2>
+<br>
+<h4>Address:</h4>
+<p><%= @dog.family.house.address %><br>
+<%= @dog.family.house.city %>, <%= @dog.family.house.provence %> <%= @dog.family.house.postal_code %><br>
+<%= @dog.family.house.description %></p>
+<br>
+<h4>Family:</h4>
+<ul>
+<% @dog.family.people.each do | person | %>
+    <%= link_to person_path(person) do %>
+        <li><%= person.fullname %></li>
+    <% end %>
+<% end %>
+</ul>

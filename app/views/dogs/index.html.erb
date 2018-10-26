@@ -1,2 +1,10 @@
-<h2>Dogs#index</h2>
-<p>Find me in app/views/dogs/index.html.erb</p>
+<h2>Dogs</h2>
+
+<ul class="list-group">
+    <% @dogs.each do | dog | %>
+        <%= link_to dog_path(dog), class: "list-group-item" do %>
+            <img src="<%= dog.image_url %>" height="150" width="150" class="img-thumbnail rounded-circle float-left">
+            <p><%= dog.name %></p>
+        <% end %>
+    <% end %>
+</ul>   
